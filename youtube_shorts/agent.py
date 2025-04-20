@@ -1,4 +1,4 @@
-from google.adk.agent import LlmAgent
+from google.adk.agents import LlmAgent
 from google.adk.tools import google_search
 
 from .util import load_instruction_from_file
@@ -28,7 +28,7 @@ formatter_agent = LlmAgent(
 )
 
 youtube_shorts_agent = LlmAgent(
-    model="gemini-2.5-pro-preview-03-25",
+    model="gemini-2.0-flash",
     name="youtube_shorts_agent",
     description="You are a ShortForm content genius. An AI specialized in crafting engaging youtube shorts content.",
     instruction=load_instruction_from_file("script_writer_instructions.txt")
